@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIL_HUB</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a0b0add;
+            color: #7af5934e;
+            line-height: 1.6;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        h1, h2, h3 {
+            margin: 0;
+            padding: 0;
+        }
+        /* Header styles */
+        header {
+            background-color: #131214f7;
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        /* Navigation styles */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        nav > div {
+            margin-right: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h3 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #343a40;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        /* Link styles */
+        a {
+            display: block;
+            padding: 10px 20px;
+            background: linear-gradient(to right, #007bff, #6c757d);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            text-align: center;
+        }
+        a:hover {
+            background: linear-gradient(to right, #0056b3, #5a6268);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📧 Welcome to MAIL_HUB 📧</h1>
+        <h2>You can send messages to any ESA or SMA device with a simple click</h2>
+    </header>
+    
+    <nav>
+        <div>
+            <h3>ESA Devices</h3>
+            <ul id="esa-list">
+                <!-- ESA devices -->
+            </ul>
+        </div>
+        <div>
+            <h3>SMA Devices</h3>
+            <ul id="sma-list">
+                <!-- SMA devices -->
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        // JavaScript to populate ESA and SMA device lists
+        document.addEventListener("DOMContentLoaded", function() {
+            var esaList = document.getElementById("esa-list");
+            var smaList = document.getElementById("sma-list");
+
+            // Populate ESA devices
+            for (var i = 1; i <= 20; i++) {
+                var esaDevice = document.createElement("li");
+                var esaLink = document.createElement("a");
+                esaLink.textContent = "ESA" + i;
+                esaLink.href = "#";
+                esaDevice.appendChild(esaLink);
+                esaList.appendChild(esaDevice);
+            }
+
+            // Populate SMA devices
+            for (var j = 1; j <= 20; j++) {
+                var smaDevice = document.createElement("li");
+                var smaLink = document.createElement("a");
+                smaLink.textContent = "SMA" + j;
+                smaLink.href = "#";
+                smaDevice.appendChild(smaLink);
+                smaList.appendChild(smaDevice);
+            }
+        });
+    </script>
+</body>
+</html>
